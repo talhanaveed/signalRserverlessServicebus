@@ -1,26 +1,18 @@
 ---
-title: <Article Title>
-description: <Article Description>
-author: <github username>
-ms.date: <publish or update date - mm/dd/yyyy>
+title: Sharing location in real time using low cost serverless Azure services
+description: SignalR configured in server-less mode to work with Azure Function triggered by Service Bus. All of it using .NET Core. This scenario is best used for real time messaging applications where users require a low-cost but robust messaging service. 
+author: talhanaveed
+ms.date: 10/10/2019
 ---
-# Article Title
+# Sharing location in real time using low cost serverless Azure services
 
-The title is a noun phrase that describes the scenario.
+Ever wondered how you receive location of your Uber without the whole page refreshing? How you are able to track your food delivery guy in real time? How social media services are able to send you notifications without a browser refresh? Real time messaging services. That's how!
 
-> Example: "Insurance claim image classification on Azure"
+In this example, I look at how we can set up a real time messaging service to share live location of a food delivery guy on his way to deliver to you a fresh pizza. This example can also be useful for users trying to build a real time location sharing platform for their web or mobile applications.
 
-Avoid naming the scenario after the Azure technologies that are used.
+Azure allows you to go server-less and only pay for what you use. So if your clients have budget issues and cannot afford servers for hosting your messaging service backend, this example is for you!
 
-<Introductory section (no heading)>
-
-> This should be an introduction of the business problem and why this scenario was built to solve it.
->> What industry is the customer in?
->> What prompted them to solve the problem?
->> What services were used in building out this solution?
->> What does this example scenario show? What are the customer's goals?
-
-> What were the benefits of implementing the solution described blow?
+I will be using a SignalR service configured in server-less mode to integrate with an Azure Functions app triggered by a Service Bus. All of it using .NET Core
 
 ## Potential use cases
 
