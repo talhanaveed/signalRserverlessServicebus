@@ -16,12 +16,12 @@ I will be using a SignalR service configured in server-less mode to integrate wi
 
 ## Potential use cases
 
-> Are there any other use cases or industries where this would be a fit?
-> How similar or different are they to what's in this article?
-
 These other uses cases have similar design patterns:
 
-* List of example use cases
+* Sharing real time location with client devices.
+* Pushing notifications to users.
+* Updating timelines.
+* Create chat rooms.
 
 ## Architecture
 
@@ -34,12 +34,11 @@ These other uses cases have similar design patterns:
 
 ### Components
 
-A bullet list of components in the architecture (including all relevant Azure services) with links to the product documentation.
+* [Service Bus](https://azure.microsoft.com/en-us/services/service-bus/), a highly-reliable cloud messaging service between applications and services, even when one or more is offline. Available in every Azure region, this fully-managed service eliminates the burdens of server management and licensing. 
+* [SignalR](https://azure.microsoft.com/en-us/services/signalr-service/), makes it easy to add real-time communications to your web application. It is as simple as provisioning a service—no need to be a real-time communications guru!
+* [Azure Functions](https://azure.microsoft.com/en-in/services/functions/), an event-driven serverless compute platform that can also solve complex orchestration problems. Build and debug locally without additional setup, deploy and operate at scale in the cloud and integrate services using triggers and bindings.
 
-> Why is each component there?
-> What does it do and why was it necessary?
 
-* Example: [Resource Groups][resource-groups] is a logical container for Azure resources.  We use resource groups to organize everything related to this project in the Azure console.
 
 ### Alternatives
 
