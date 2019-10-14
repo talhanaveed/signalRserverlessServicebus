@@ -42,9 +42,13 @@ These other uses cases have similar design patterns:
 
 ### Alternatives
 
-Use this section to talk about alternative Azure services or architectures that you might consider for this solution. Include the reasons why you might choose these alternatives.
+In the past, I have worked on a similar example with [Pusher](https://pusher.com/). It is the category leader in robust APIs for app developers building scalable realtime communication features. 
 
-> What alternative technologies were considered and why didn't we use them?
+There is also [PubNub](https://pubnub.com/). PubNub makes it easy for you to add real-time capabilities to your apps, without worrying about the infrastructure. Build apps that allow your users to engage in real-time across mobile, browser, desktop and server.
+
+No doubt that Pusher and PubNub are the widely adopted platforms for real-time messaging but I wanted to do everything in Azure using just Azure services. SignalR was simply the go to for me as it allows bi-directional communication between server and client. It is also an open source tool with 7.9K GitHub stars and 2.2K GitHub forks. 
+
+[Here's](https://github.com/SignalR/SignalR) a link to SignalR's open source repository on GitHub.
 
 ## Considerations
 
