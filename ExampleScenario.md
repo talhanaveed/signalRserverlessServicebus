@@ -25,14 +25,7 @@ These other uses cases have similar design patterns:
 
 ## Architecture
 
-*Architecture Diagram goes here*
-
-![Alt text](./archdiagram.svg)
-
-> What does the solution look like at a high level?
-> Why did we build the solution this way?
-> What will the customer need to bring to this?  (Software, skills, etc?)
-> Is there a data flow that should be described?
+![Architecture Diagram](./archdiagram.svg)
 
 ### Components
 
@@ -118,27 +111,18 @@ This is a node js script to push a message to the Service Bus so that you can te
 2. Enter your connection strings and queue name in the script.
 3. Run the script. 
 
-## Pricing
-
-> How much will this cost to run?
-> Are there ways I could save cost?
-> If it scales linearly, than we should break it down by cost/unit.  If it does not, why?
-> What are the components that make up the cost?
-> How does scale effect the cost?
->
-> Link to the pricing calculator with all of the components in the architecture included, even if they're a $0 or $1 usage.
-> If it makes sense, include a small/medium/large configurations.  Describe what needs to be changed as you move to larger sizes
-
 ## Next Steps
 
-> Where should I go next if I want to start building this?
-> Are there any reference architectures that help me build this?
+You can take this scenario right into your production environment. However, make sure your Azure services are set to scale. For instance, your Azure Service Bus should be set to a standard or premium plan.
+
+You can deploy the code to Azure Functions right from Visual Studio. [Follow this guide](https://tutorials.visualstudio.com/first-azure-function/publish) to know how to publish your code to Azure Functions from Visual Studio. 
+
 
 ## Related Resources
 
-> Are there any relevant case studies or customers doing something similar?
-> Is there any other documentation that might be useful?
-> Are there product documents that go into more detail on specific technologies not already linked
+[This article explains](https://docs.microsoft.com/en-us/azure/azure-functions/functions-bindings-service-bus) how to work with Azure Service Bus bindings in Azure Functions. Azure Functions supports trigger and output bindings for Service Bus queues and topics.
+
+[This article explains](https://docs.microsoft.com/en-us/azure/azure-functions/functions-bindings-signalr-service) how to authenticate and send real-time messages to clients connected to Azure SignalR Service by using SignalR Service bindings in Azure Functions. Azure Functions supports input and output bindings for SignalR Service.
 
 <!-- links -->
 [calculator]: https://azure.com/e/
