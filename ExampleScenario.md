@@ -27,6 +27,8 @@ These other uses cases have similar design patterns:
 
 *Architecture Diagram goes here*
 
+![Alt text](./archdiagram.svg)
+
 > What does the solution look like at a high level?
 > Why did we build the solution this way?
 > What will the customer need to bring to this?  (Software, skills, etc?)
