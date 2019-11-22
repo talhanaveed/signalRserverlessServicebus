@@ -55,15 +55,28 @@ There is also little documentation on the difference between Hubs and Targets.
 
 **Targets:** Targets are like radio channels. Everyone who is listening to the Target channel and is notified when there is a new message on it. 
 
-If you can remember the above to features of SignalR platform, you will face no difficulties setting it up. 
+If you can remember the above two features of SignalR platform, you will face no difficulties setting it up. 
 
 ### Availability, Scalability, and Security
 
-> How do I need to think about managing, maintaining, and monitoring this long term?
+You can achieve high availabilty of this solution by doing the following:
 
-> Are there any size considerations around this specific solution?
-> What scale does this work at?
-> At what point do things break or not make sense for this architecture?
+#### Regional Pairing
+
+Each Azure region is paired with another region within the same geography. In general, choose regions from the same regional pair (for example, East US 2 and Central US). Benefits of doing so include:
+
+* If there is a broad outage, recovery of at least one region out of every pair is prioritized.
+* Planned Azure system updates are rolled out to paired regions sequentially to minimize possible downtime.
+* In most cases, regional pairs reside within the same geography to meet data residency requirements.
+* However, make sure that both regions support all of the Azure services needed for your application. See Services by region. For more information about regional pairs, see Business continuity and disaster recovery (BCDR): Azure Paired Regions.
+
+#### Azure Front Door
+
+> Insert architecture here
+
+Front Door automatically fails over if the primary region becomes unavailable. A multi-region architecture can provide higher availability than deploying to a single region. If a regional outage affects the primary region, you can use Front Door to fail over to the secondary region. This architecture can also help if an individual subsystem of the solution fails.
+
+Front Door is a possible failure point in the system. If the service fails, clients cannot access your application during the downtime. Review the Front Door service level agreement (SLA) and determine whether using Front Door alone meets your business requirements for high availability. If not, consider adding another traffic management solution as a fallback. If the Front Door service fails, change your canonical name (CNAME) records in DNS to point to the other traffic management service. This step must be performed manually, and your application will be unavailable until the DNS changes are propagated.
 
 > Are there any security considerations (past the typical) that I should know about this?
 
