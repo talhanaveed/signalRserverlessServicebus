@@ -78,8 +78,16 @@ Azure Front Door is a scalable and secure entry point for fast delivery of your 
 
 Front Door is a possible failure point in the system. If the service fails, clients cannot access your application during the downtime. Review the [Front Door service level agreement (SLA)](https://azure.microsoft.com/support/legal/sla/frontdoor) and determine whether using Front Door alone meets your business requirements for high availability. If not, consider adding another traffic management solution as a fallback. If the Front Door service fails, change your canonical name (CNAME) records in DNS to point to the other traffic management service. This step must be performed manually, and your application will be unavailable until the DNS changes are propagated.
 
-## Pricing this scenario
+### Pricing this scenario
 
+Assume your business has 1000 orders in a day and needs to share location data with all of them concurrently, your estimated Azure usage for deploying this scenario will be close to $192
+
+| Service type          | Estimated Cost |
+|-----------------------|----------------|
+| Azure Functions       | $119.40        |
+| Azure SignalR Service | $48.97         |
+| Service Bus           | $23.71         |
+| Total                 | $192.08        |
 
 ## Deploy this scenario
 
