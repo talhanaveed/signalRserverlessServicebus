@@ -8,6 +8,13 @@ using Microsoft.Azure.WebJobs.Host;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 
+/*
+ * This function is triggered by a Service Bus Trigger. 
+ * It has a binding with SignalR service. 
+ * It pulls the message from the queue and passes it on to a SignalR hub.
+ * Replace "QUEUE_NAME" below with the name of your Azure Service Bus Queue
+ * "AzureWebJobsStorage" is the name of the connection string for Azure Service Bus. You can replace it in local.settings file.
+ */
 
 namespace FunctionApp6
 {
@@ -25,7 +32,7 @@ namespace FunctionApp6
 
             await signalRMessages.AddAsync(new SignalRMessage()
             {
-                Target = "notify",
+                Target = "notify",  //"notify" is the name of the channel to broadcast the message on
                 Arguments = new object[] { myQueueItem }
             });
 

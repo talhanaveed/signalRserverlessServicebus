@@ -4,7 +4,7 @@ var connection = new signalR.HubConnectionBuilder().withUrl("http://localhost:70
 
 //Hide connection status until connection is established
 document.getElementById("status").style.display = 'none';
-var channel = "notify";
+var channel = "notify"; //name of the channel to which the message was sent in the Hub
 
 connection.on(channel, function (message) {
 
