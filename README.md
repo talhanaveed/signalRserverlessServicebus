@@ -72,7 +72,7 @@ Each Azure region is paired with another region within the same geography. In ge
 
 #### Azure Front Door
 
-> Insert architecture here
+![Architecture Diagram](./HA-Architecture.svg)
 
 Azure Front Door is a scalable and secure entry point for fast delivery of your global applications. Using *priority routing*, it automatically fails over if the primary region becomes unavailable. A multi-region architecture can provide higher availability than deploying to a single region. If a regional outage affects the primary region, you can use Front Door to fail over to the secondary region. This architecture can also help if an individual subsystem of the solution fails. Stop network and application layer attacks at the edge with Web Application Firewall and DDoS Protection. Harden your service using Microsoft managed rule sets and author your own rules for custom protection of your app.
 
